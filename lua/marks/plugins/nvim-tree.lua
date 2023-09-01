@@ -36,6 +36,7 @@ return {
       -- change folder arrow icons
       renderer = {
         icons = {
+          git_placement = "after",
           glyphs = {
             folder = {
               arrow_closed = "", -- arrow when folder is closed
@@ -55,10 +56,15 @@ return {
         },
       },
       filters = {
-        custom = { ".DS_Store" },
+        git_ignored = true,
+        dotfiles = true,
+        git_clean = false,
+        no_buffer = false,
+        custom = { ".git" },
+        exclude = {  },
       },
       git = {
-        ignore = false,
+        ignore = true,
       },
     })
 
