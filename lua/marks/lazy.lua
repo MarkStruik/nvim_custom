@@ -12,4 +12,12 @@ end
 vim.opt.rtp:prepend(lazypath)
 
 
-require("lazy").setup( "marks.plugins" )
+require("lazy").setup( { { import =  "marks.plugins" }, { import = "marks.plugins.lsp" } }, {
+  checker = {
+    enabled = true,
+    notify = false,
+  },
+  change_detection = {
+    notify = false,
+  },
+})
